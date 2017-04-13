@@ -1,0 +1,66 @@
+﻿
+<div class="container">
+    <h4 style="color: blue" onclick="clicked();"><u>@Html.Raw(ViewBag.TeamTitle)</u></h4>
+</div>
+
+<div id="teamMembers" class="container2 hidden">
+    <table id="members" class="table">
+        <thead>
+            <tr>
+                <th>
+                    Komandos nariai
+                </th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: contestants">
+            <tr>
+                <td data-bind="text: Name">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="text-center container color-scheme1">
+    <h4>@ViewBag.StageTitle</h4>
+</div>
+<table id="questionsTable" class="table">
+    <thead>
+        <tr>
+            <th>Eil. Nr.</th>
+            <th>Užduotis</th>
+            <th>Būsena</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: questions">
+        <tr>
+            <td data-bind="text: orderNo" style="width: 80px;"></td>
+            <td>
+                <label data-bind="html: questionText" style="font-weight:400;"></label><br />
+                <img data-bind="attr: { src: questionImage}" class="img-rounded">
+            </td>
+            <td data-bind="text: answer, attr: { id: textBox }, css: cssClass" style="width: 150px;"></td>
+            <td class="text-right col-lg-1">
+                <button class="btn" onclick="check2(this);" data-bind="disable: isSolved, attr: { id: button }">Įvesti atsakymą...</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="container2">
+    <div id="answerDiv" class="content">
+        <label id="hintLabel"></label><br />
+        <img id="hintImage" class="img-rounded" />
+        <input class="form-control" onfocus="clearError(this);" type="text" id="answerBox" placeholder="Įveskite atsakymą" autofocus required />
+        <button class="btn" onclick="checkAnswer();">Tikrinti</button>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/knockout-3.4.2.js"></script>
+    <script src="~/App/ContestantsViewModel.js"></script>
+    <script src="~/App/QuestionViewModel.js"></script>
+    <script src="~/App/Register.js"></script>
+    <script src="~/App/Countdown.js"></script>
+}

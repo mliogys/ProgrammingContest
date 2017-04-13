@@ -1,0 +1,16 @@
+﻿<div class="container">
+    <h4></h4>
+</div>
+
+<div class="text-center container color-scheme1">
+        Rungtis prasidės už: <span id="timeToEvent"></span>
+</div>
+
+
+@section scripts {
+    <script src="~/Scripts/knockout-3.4.2.js"></script>
+    <script>
+        var timeValue = '@(ViewBag.timeValue)';
+    </script>
+    <script src="~/App/Countdown2.js"></script>
+}

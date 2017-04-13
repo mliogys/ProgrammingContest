@@ -1,0 +1,44 @@
+﻿<div>
+    <div >
+        <h3>Seifo kodas apskaičiuojamas pagal formulę: A1 + A2 + A3 + A4 + A5</h3>
+    </div>
+    <div>
+        <table id="safeQuestionsTable" class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Užd. Nr.
+                    </th>
+                    <th>
+                        Užduotis
+                    </th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: questions">
+                <tr>
+                    <td data-bind="text: orderNo" style="width: 80px;">
+
+                    </td>
+                    <td>
+                        <label data-bind="html: questionText" style="font-weight:400;"></label><br />
+                        <img data-bind="attr: { src: questionImage}" class="img-rounded">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <input type="text" id="codeBox" onfocus="clearError(this);" class="form-control" placeholder="Seifo kodas" required autofocus>
+    </div>
+    <div>
+        <button style="margin-top:5px;" id="codeButton" class="btn btn-block btn-lg color-scheme1" onclick="checkSafeCode();" type="submit">Įvesti kodą</button>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/knockout-3.4.2.js"></script>
+    <script src="~/App/Register.js"></script>
+    <script src="~/App/Countdown3.js"></script>
+    <script src="~/App/SafeQuestionViewModel.js"></script>
+    
+}

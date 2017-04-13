@@ -1,0 +1,54 @@
+﻿.color-scheme1 {
+    background-color: darkslategrey;
+    color: aliceblue;
+}
+
+#footer {
+   /*position:absolute;*/
+   bottom:10px;
+   width:100%;
+   height:20px;
+}
+
+.color-scheme2 {
+    background-color: lightpink;
+    color: crimson;
+}
+
+.color-scheme3 {
+    background-color:darkgrey;
+    color: black;
+    font-weight: 700;
+}
+
+.color-solved {
+    color: green;
+}
+
+.color-unsolved {
+    color: darkred;
+}
+
+.container2 {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.container2 div {
+    width:100%;
+}
+.container2 .header {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.container2 .content {
+    display: none;
+    padding : 5px;
+}
+
+.loadingIndicator {
+    background-image: url('/Images/loader.gif');
+    width: 24px;
+    height: 24px;
+}

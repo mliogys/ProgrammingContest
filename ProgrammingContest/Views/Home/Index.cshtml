@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Konkursas";
+}
+
+<form class="form-signin">
+    <div class="text-center">
+        <h3 class="form-signin-heading">Prisijungimas</h3>
+    </div>   
+    <div>
+        <label for="loginID" class="sr-only">Registracijos kodas:</label>
+        <input type="number" id="loginID" class="form-control" placeholder="Registracijos kodas" required autofocus>
+    </div>
+    <div>
+        <button style="margin-top:5px;" class="btn btn-block btn-lg color-scheme1" onclick="Register();" type="submit">Jungtis</button>
+    </div>
+</form>
+
+@section scripts {
+    <script src="~/App/Register.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>    
+}
